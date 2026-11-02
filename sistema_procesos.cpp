@@ -9,16 +9,15 @@ using namespace std;
 
 #define MEMORIA_TOTAL 1024
 
-// ---------- Estructuras ----------
 
 // Nodo de la lista enlazada: un proceso registrado
 // estado: 0 NUEVO, 1 LISTO, 2 EN EJECUCION, 3 BLOQUEADO, 4 TERMINADO
 struct Proceso {
     int id;
     char nombre[30];
-    int prioridad;      // 1 = mayor prioridad, 5 = menor
+    int prioridad;      
     int estado;
-    int memoria;        // memoria que necesita (MB)
+    int memoria;        
     Proceso *sig;
 };
 
@@ -43,7 +42,7 @@ Bloque *tope = NULL;        // tope de la pila
 int memoriaAsignada = 0;
 int contadorBloques = 1;
 
-// ---------- Funciones auxiliares ----------
+
 
 // Pide un numero y lo repite hasta que este dentro del rango
 int leerNumero(const char *mensaje, int minimo, int maximo) {
